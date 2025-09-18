@@ -26,7 +26,10 @@ define(["lib-build/tpl!./FloatingPanelSection",
 		CommonHelper,
 		SocialSharing,
 		has,
-		topic
+		topic,
+    hammerx,
+    jqueryx,
+    Swiper
 	){
 		return function FloatingPanel(container, isInBuilder, navigationCallback)
 		{

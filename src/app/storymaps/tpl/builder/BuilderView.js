@@ -120,7 +120,8 @@ define(["lib-build/tpl!./BuilderView",
 				//
 				// Layout specificity related to handling events
 				//
-				$('body').on('shown.bs.modal', '.modal', function (e) {
+				// $('body').on('shown.bs.modal', '.modal', function (e) { // MOD
+        $('body').on('shown.bs.modal', '.modal', function () {
 					if( WebApplicationData.getLayoutId() == "float" )
 						app.ui.floatingPanel.disableSwiperKeybordEvent();
 
@@ -400,7 +401,8 @@ define(["lib-build/tpl!./BuilderView",
 				];
 			};
 
-			this.openSettingPopup = function(fieldsError)
+			// this.openSettingPopup = function(fieldsError)?/ MOD
+      this.openSettingPopup = function()
 			{
 				_settingsPopup.present(
 					[
@@ -590,7 +592,8 @@ define(["lib-build/tpl!./BuilderView",
 			}
 
 			/*jshint -W098 */
-			this.resize = function(cfg)
+			// this.resize = function(cfg)// MOD
+      this.resize = function()
 			{
 				// On Firefox and share dialog is displayed
 				if ( has("ff") && $("#sharePopup").hasClass("in") ) {
